@@ -104,8 +104,8 @@ $s-device: 480px;
 
 @mixin row {
   position: relative;
-  margin-left: $gutter / 2;
-  margin-right: $gutter / 2;
+  margin-left: -$gutter / 2;
+  margin-right: -$gutter / 2;
   @include device(s) {
     margin-left: 0;
     margin-right: 0;
