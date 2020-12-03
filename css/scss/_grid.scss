@@ -91,8 +91,8 @@ $s-device: 480px;
     max-width: $m-device;
   }
   @include device(s) {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: $s-device;
   }
   @include clearfix;
@@ -100,4 +100,19 @@ $s-device: 480px;
 
 .container {
   @include container;
+}
+
+@mixin row {
+  position: relative;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  @include device(s) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include clearfix;
+}
+
+.row { 
+  @include row;
 }
