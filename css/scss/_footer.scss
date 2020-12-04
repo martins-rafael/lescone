@@ -1,0 +1,23 @@
+footer {
+  padding: 20px 0;
+  background: $grey;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @include device(s) {
+      flex-direction: column;
+    }
+  }
+  @include box-shadow(0 0 0 10px $grey);
+  p {
+    color: $light-beige;
+    @include device(s) {
+      text-align: center;
+    }
+  }
+  a img {
+    @include device(s) {
+      margin: 20px auto;
+    }
+  }
+}
