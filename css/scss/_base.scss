@@ -2,4 +2,36 @@ body {
   background: $light-beige;
   color: $grey;
   border: 10px solid $medium-beige;
+  @include device(s) {
+    border: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  @include type-1(18);
+}
+
+.title {
+  @include type-1(18);
+  text-transform: uppercase;
+  @include device(s) {
+    margin-bottom: 40px;
+  }
+  &::after {
+    content: '';
+    float: right;
+    display: block;
+    margin-top: 14px;
+    width: 75%;
+    height: 2px;
+    background: $grey;
+    @include device(m) {
+      width: 60%;
+    }
+  }
 }
