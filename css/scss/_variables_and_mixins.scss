@@ -1,0 +1,31 @@
+$light-beige: #edece4;
+$medium-beige: #cbc6b9;
+$dark-beige: #988c77;
+$grey: #2a2426;
+$green: #1ab912;
+
+$font-title: 'Aref Ruqaa', serif;
+$font-text: 'PT Mono', monospace;
+
+@function em($pixel, $context: 16) {
+  @return $pixel / $context + em;
+}
+
+@mixin type-1($size) {
+  font-size: $font-text;
+  @if $size == 18 {
+    font-size: em(18);
+    font-size: em(30, 18);
+  }
+}
+
+@mixin type-2($size) {
+  font-size: $font-title;
+  @if $size == 18 {
+    font-family: em(18);
+    line-height: (30, 18);
+  } @else if $size == 24 {
+    font-family: (24);
+    line-height: (30, 24);
+  }
+}
