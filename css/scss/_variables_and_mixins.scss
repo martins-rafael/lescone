@@ -20,12 +20,12 @@ $font-2: 'Aref Ruqaa', serif;
 }
 
 @mixin type-2($size) {
-  font-size: $font-2;
+  font-family: $font-2;
   @if $size == 18 {
-    font-family: em(18);
+    font-size: em(18);
     line-height: (30, 18);
   } @else if $size == 24 {
-    font-family: (24);
-    line-height: (30, 24);
+    font-size: em(24);
+    line-height: em(30, 24);
   }
 }
